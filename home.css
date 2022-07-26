@@ -1,11 +1,14 @@
+.home-heading{
+    margin-top: 10%;
+}
 .subscription-body{
-    background-color: rgb(176, 246, 248);
+    
     width:90%;
     max-width: 1000px;
-    height: 300px;
+    min-height: 300px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+   margin-top: 12px;
 }
 .monthyear{
     background-color: #055eb9;
@@ -15,8 +18,13 @@
 }
 .monthyear .btn{
     width: 100px;
+    color: white;
 }
 .monthyear .btn-active{
     background-color: white;
     border-radius: 25px;
+    color: black;
+}
+.sub-heading{
+    margin-bottom:30px;
 }
