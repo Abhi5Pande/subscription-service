@@ -208,10 +208,13 @@ if (isset($_SESSION["username"])) {
             </div>
             <hr>
         </div>';
-
-          
+        ?>
         
-         ?>
+    </div>
+    <div class="row">
+        <div class="next-sec">
+            <button class="btn next-btn btn-block">Next</button>
+        </div>
     </div>
 </div>
 

@@ -36,7 +36,7 @@ div{
    height: 75px;
    line-height: 75px;
     text-align: center;
-    background-color:#496e86 ;
+    background-color:#82b2f9;;
     color: white;
     width: 80%;
     margin: auto;
@@ -50,4 +50,25 @@ div{
 .head-active-ele
 {
     color: #055eb9;
+}
+.next-sec{
+    width: 80%;
+    max-width: 400px;
+    
+    margin: auto;
+}
+.next-btn{
+    width: 100%;
+    background-color: #055eb9;
+    color: white;
+}
+.next-btn:hover{
+    width: 100%;
+    background-color: #055eb9;
+    color: white;
+}
+.next-btn:active{
+    width: 100%;
+    background-color: #055eb9;
+    color: white;
 }
