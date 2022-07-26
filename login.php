@@ -58,10 +58,10 @@ if (! empty($_POST["login-btn"])) {
                             Remember me
                         </label>
                     </div>
-					<div class="row">
-						<input class="btn" type="submit" name="login-btn"
-							id="login-btn" value="Login">
-					</div>
+				
+					<div class="d-grid gap-2 submit-button">
+                    <input class="btn btn-primary" type="Submit" name="login-btn" id="login-btn" value="Login">
+                	</div>
 				</form>
 				<p class="text-center">New to MyApp? <a  class="text-decoration-none" href="register.php">Sign up</a></p>
 			</div>
