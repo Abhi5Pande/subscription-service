@@ -47,18 +47,27 @@ if (isset($_SESSION["username"])) {
                 </div>
             </div>
             <div class="col-8">
-                <div class="row">
-                    <div class="col-3 mobile">
+                <div class="row plan-heading">
+                    <div class="col-3">
+                        <div class="plan-col head-active" id="mobile-head">
                         mobile
+                        </div>
                     </div>
-                    <div class="col-3 basic">
+                    <div class="col-3">
+                        <div class=" plan-col" id="basic-head">
                         Basic
+                        </div>
                     </div>
-                    <div class="col-3 standard">
-                        Standard
+                    <div class="col-3">
+                        <div class=" plan-col" id= "standard-head">
+                            standard
+                        </div>
+                        
                     </div>
-                    <div class="col-3 premium">
+                    <div class="col-3">
+                        <div class="plan-col" id="premium-head">
                         Premium
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,7 +95,7 @@ if (isset($_SESSION["username"])) {
                 </div>
                 <div class="col-8">
                     <div class="row">
-                        <div class="col-3 mobile">
+                        <div class="head-active-ele col-3 mobile ">
                             $'.$row1[2].'
                         </div>
                         <div class="col-3 basic">
@@ -109,7 +118,7 @@ if (isset($_SESSION["username"])) {
                 </div>
                 <div class="col-8">
                     <div class="row">
-                        <div class="col-3 mobile">
+                        <div class="head-active-ele col-3 mobile ">
                         $'.$row1[3].'
                         </div>
                         <div class="col-3 basic">
@@ -132,7 +141,7 @@ if (isset($_SESSION["username"])) {
                 </div>
                 <div class="col-8">
                     <div class="row">
-                        <div class="col-3 mobile">
+                        <div class="head-active-ele col-3 mobile ">
                         '.$row1[4].'
                         </div>
                         <div class="col-3 basic">
@@ -155,7 +164,7 @@ if (isset($_SESSION["username"])) {
                 </div>
                 <div class="col-8">
                     <div class="row">
-                        <div class="col-3 mobile">
+                        <div class="head-active-ele col-3 mobile ">
                         '.$row1[5].'
                         </div>
                         <div class="col-3 basic">
@@ -178,7 +187,7 @@ if (isset($_SESSION["username"])) {
             </div>
             <div class="col-8">
                 <div class="row">
-                    <div class="col-3 mobile">
+                    <div class="head-active-ele col-3 mobile ">
                         <p> Phone </p>
                     </div>
                     <div class="col-3 basic">
@@ -213,6 +222,7 @@ if (isset($_SESSION["username"])) {
     console.log(yearly);
     var price_m = document.getElementById("price_m");
     var price_y = document.getElementById("price_y");
+  
     monthly.addEventListener("click",function(){
         console.log("month button pressed");
         let current = document.getElementsByClassName("btn-active");
@@ -229,6 +239,114 @@ if (isset($_SESSION["username"])) {
         price_m.className += " d-none"
         price_y.classList.remove("d-none")
     });
+
+    var mobile_head= document.getElementById("mobile-head");
+    console.log(mobile_head);
+    var basic_head= document.getElementById("basic-head");
+    console.log(basic_head);
+    var standard_head= document.getElementById("standard-head");
+    var premium_head= document.getElementById("premium-head");
+    var basic = document.getElementsByClassName("basic");
+    var mobile = document.getElementsByClassName("mobile");
+    var standard = document.getElementsByClassName("standard");
+    var premium = document.getElementsByClassName("premium");
+    console.log(basic);
+    
+    mobile_head.addEventListener("click",function(){
+        console.log("clicked mobile button");
+        let current = document.getElementsByClassName("head-active");
+        current[0].className = current[0].className.replace("head-active" , "");
+        mobile_head.className += " head-active";
+        let currtext = document.getElementsByClassName("head-active-ele");
+        console.log(currtext);
+        currtext[0].classList.remove("head-active-ele");
+        console.log(currtext[0]);
+        currtext[1].classList.remove("head-active-ele");
+        console.log(currtext[1]);
+        currtext[0].classList.remove("head-active-ele");
+        console.log(currtext[2]);
+        currtext[1].classList.remove("head-active-ele");
+        console.log(currtext[3]);
+        currtext[0].classList.remove("head-active-ele");
+        console.log(currtext[4]);
+        for(let i =0 ; i < basic.length ; i++)
+        {
+            mobile[i].className += " head-active-ele";
+        }
+    });
+    basic_head.addEventListener("click",function(){
+        console.log("clicked basic button");
+        let current = document.getElementsByClassName("head-active");
+        current[0].className = current[0].className.replace(" head-active" , "");
+        basic_head.className += " head-active";
+        let currtext = document.getElementsByClassName("head-active-ele");
+        console.log("currtext",currtext);
+        
+        currtext[0].classList.remove("head-active-ele");
+        console.log(currtext[0]);
+        currtext[1].classList.remove("head-active-ele");
+        console.log(currtext[1]);
+        currtext[0].classList.remove("head-active-ele");
+        console.log(currtext[2]);
+        currtext[1].classList.remove("head-active-ele");
+        console.log(currtext[3]);
+        currtext[0].classList.remove("head-active-ele");
+        console.log(currtext[4]);
+
+
+        
+        console.log(basic);
+        for(let i =0 ; i < basic.length ; i++)
+        {
+            basic[i].className += " head-active-ele";
+        }
+    });
+    standard_head.addEventListener("click",function(){
+        let current = document.getElementsByClassName("head-active");
+        current[0].className = current[0].className.replace(" head-active" , "");
+        standard_head.className += " head-active";
+        let currtext = document.getElementsByClassName("head-active-ele");
+       console.log(currtext);
+       currtext[0].classList.remove("head-active-ele");
+        console.log(currtext[0]);
+        currtext[1].classList.remove("head-active-ele");
+        console.log(currtext[1]);
+        currtext[0].classList.remove("head-active-ele");
+        console.log(currtext[2]);
+        currtext[1].classList.remove("head-active-ele");
+        console.log(currtext[3]);
+        currtext[0].classList.remove("head-active-ele");
+        console.log(currtext[4]);
+        for(let i =0 ; i < standard.length ; i++)
+        {
+            standard[i].className += " head-active-ele";
+        }
+       
+    });
+    premium_head.addEventListener("click",function(){
+        console.log("clicked basic button");
+        let current = document.getElementsByClassName("head-active");
+        current[0].className = current[0].className.replace(" head-active" , "");
+        premium_head.className += " head-active";
+        let currtext = document.getElementsByClassName("head-active-ele");
+       console.log(currtext);
+       currtext[0].classList.remove("head-active-ele");
+        console.log(currtext[0]);
+        currtext[1].classList.remove("head-active-ele");
+        console.log(currtext[1]);
+        currtext[0].classList.remove("head-active-ele");
+        console.log(currtext[2]);
+        currtext[1].classList.remove("head-active-ele");
+        console.log(currtext[3]);
+        currtext[0].classList.remove("head-active-ele");
+        console.log(currtext[4]);
+        for(let i =0 ; i < premium.length ; i++)
+        {
+            premium[i].className += " head-active-ele";
+        }
+        
+    });
+
 </script>
 
 

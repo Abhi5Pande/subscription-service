@@ -1,6 +1,9 @@
 .home-heading{
     margin-top: 10%;
 }
+div{
+    text-align: center;
+}
 .subscription-body{
     
     width:90%;
@@ -13,7 +16,7 @@
 .monthyear{
     background-color: #055eb9;
     border-radius: 25px;
-    margin-top: 5%;
+   
     padding: 5px;
 }
 .monthyear .btn{
@@ -27,4 +30,24 @@
 }
 .sub-heading{
     margin-bottom:30px;
+}
+
+.plan-heading .plan-col{
+   height: 75px;
+   line-height: 75px;
+    text-align: center;
+    background-color:#496e86 ;
+    color: white;
+    width: 80%;
+    margin: auto;
+}
+.plan-heading .plan-col:hover{
+    background-color:#055eb9 ;
+}
+.plan-heading .head-active{
+    background-color:#055eb9 ;
+}
+.head-active-ele
+{
+    color: #055eb9;
 }
