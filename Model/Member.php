@@ -119,16 +119,6 @@ class Member
         return $memberRecord;
     }
 
-    public function getEmail($email)
-    {
-        $query = 'SELECT * FROM tbl_member where email = ?';
-        $paramType = 's';
-        $paramValue = array(
-            $email
-        );
-        $memberRecord = $this->ds->select($query, $paramType, $paramValue);
-        return $memberRecord;
-    }
     /**
      * to login a user
      *
@@ -136,7 +126,7 @@ class Member
      */
     public function loginMember()
     {
-        $memberRecord = $this->getMember($_POST["email"]);
+        $memberRecord = $this->getMember($_POST["username"]);
         $loginPassword = 0;
         if (! empty($memberRecord)) {
             if (! empty($_POST["login-password"])) {
@@ -154,7 +144,7 @@ class Member
             // login sucess so store the member's username in
             // the session
             session_start();
-            $_SESSION["email"] = $memberRecord[0]["email"];
+            $_SESSION["username"] = $memberRecord[0]["username"];
             session_write_close();
             $url = "./home.php";
             header("Location: $url");
