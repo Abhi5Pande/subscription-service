@@ -47,7 +47,7 @@ if (! empty($_POST["login-btn"])) {
 						</div>
 					</div> -->
 					<label for="email">Email</label>
-                    <input type="text" name="username" class="form-control" placeholder="Enter Email id" id="username"
+                    <input type="text" name="email" class="form-control" placeholder="Enter Email id" id="email"
                         validate>
 					<!-- Password -->
 					<label for="password">Password</label>
@@ -63,7 +63,7 @@ if (! empty($_POST["login-btn"])) {
                     <input class="btn btn-primary" type="Submit" name="login-btn" id="login-btn" value="Login">
                 	</div>
 				</form>
-				<p class="text-center">New to MyApp? <a  class="text-decoration-none" href="register.php">Sign up</a></p>
+				<p class="text-center">New to MyApp? <a  class="text-decoration-none" href="user-registration.php">Sign up</a></p>
 			</div>
 		</div>
 	</div>
@@ -71,17 +71,17 @@ if (! empty($_POST["login-btn"])) {
 	<script>
 function loginValidation() {
 	var valid = true;
-	$("#username").removeClass("error-field");
+	$("#email").removeClass("error-field");
 	$("#password").removeClass("error-field");
 
-	var UserName = $("#username").val();
+	var UserName = $("#email").val();
 	var Password = $('#login-password').val();
 
 	$("#username-info").html("").hide();
 
 	if (UserName.trim() == "") {
 		$("#username-info").html("required.").css("color", "#ee0000").show();
-		$("#username").addClass("error-field");
+		$("#email").addClass("error-field");
 		valid = false;
 	}
 	if (Password.trim() == "") {

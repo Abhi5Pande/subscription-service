@@ -118,6 +118,16 @@ class Member
         $memberRecord = $this->ds->select($query, $paramType, $paramValue);
         return $memberRecord;
     }
+    public function getEmail($email)
+    {
+        $query = 'SELECT * FROM tbl_member where email = ?';
+        $paramType = 's';
+        $paramValue = array(
+            $email
+        );
+        $emailRecord = $this->ds->select($query, $paramType, $paramValue);
+        return $emailRecord;
+    }
 
     /**
      * to login a user
@@ -126,7 +136,7 @@ class Member
      */
     public function loginMember()
     {
-        $memberRecord = $this->getMember($_POST["username"]);
+        $memberRecord = $this->getEmail($_POST["email"]);
         $loginPassword = 0;
         if (! empty($memberRecord)) {
             if (! empty($_POST["login-password"])) {
